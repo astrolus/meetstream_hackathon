@@ -2,7 +2,34 @@
 
 ## Overview
 
-An AI-powered, multi-agent system that joins customer-facing interactions (sales calls, support conversations) and autonomously drives revenue, customer satisfaction, and operational efficiency through intelligent task delegation.
+A multi-agent AI system that joins sales and support conversations, surfaces real-time insights to reps, and autonomously prepares post-meeting actions—while keeping the human in control.
+
+---
+
+## Frontend Experience (Rep Interface)
+
+### Live Meeting View
+
+* Real-time transcription and summarized insights
+* Instant answers to doctor questions using internal data + context
+* Key signals surfaced (buy intent, objections, concerns)
+
+### Sentiment & Call Health
+
+* Live sentiment bar indicating how the conversation is trending
+* Highlights risk moments (confusion, hesitation, dissatisfaction)
+
+### Action Panel (Human-in-the-Loop)
+
+* Background agents generate post-meeting actions in real time
+* Each action requires explicit **Approve / Deny** from the rep
+
+Examples:
+
+* Draft follow-up email → Approve / Deny
+* Schedule next meeting → Approve / Deny
+* CRM update → Approve / Deny
+* Refund / resolution suggestion → Approve / Deny
 
 ---
 
@@ -10,82 +37,68 @@ An AI-powered, multi-agent system that joins customer-facing interactions (sales
 
 ### Head Agent (Orchestrator)
 
-* Joins meetings and transcribes conversations
-* Maintains full conversation context and customer history
-* Interprets intent (sales signals, complaints, risks)
-* Delegates tasks to specialized sub-agents
-* Aggregates outputs and determines final actions
+* Joins meetings and maintains full context
+* Interprets conversation intent and routes tasks
+* Aggregates outputs from sub-agents
+* Surfaces insights + actions to the frontend
 
 ---
 
 ### Specialized Sub-Agents
 
-#### 1. CRM & Data Agent
+#### CRM & Data Agent
 
-* Updates CRM with structured notes and deal status
-* Enriches customer profiles
-* Creates or updates leads/opportunities
+* Prepares CRM updates and structured notes
+* Creates/updates leads and opportunities
 
-#### 2. Analytics Agent
+#### Analytics Agent
 
-* Pulls relevant sales data and historical records
-* Assesses deal health and pipeline impact
-* Generates insights for next-best actions
+* Pulls sales data and historical records
+* Assesses deal health and recommends next steps
 
-#### 3. Trust & Decision Agent
+#### Trust & Decision Agent
 
-* Assigns trust scores to customer claims
-* Evaluates refund or resolution eligibility
-* Flags anomalies or risky patterns
+* Scores customer claims and evaluates resolutions
+* Flags high-risk or anomalous scenarios
 
-#### 4. Support & Bug Triage Agent
+#### Support & Bug Triage Agent
 
-* Extracts and classifies customer-reported issues
-* Logs bugs with appropriate severity
-* Routes issues to correct internal teams
+* Extracts and classifies issues raised
+* Prepares bug reports and internal routing
 
-#### 5. Compliance Agent
+#### Compliance Agent
 
-* Validates actions against regulatory requirements (e.g., med device constraints)
-* Flags non-compliant communications or resolutions
-* Ensures audit-ready documentation
+* Validates outputs against med device regulations
+* Flags non-compliant suggestions before surfacing
 
-#### 6. Communication Agent
+#### Communication Agent
 
-* Drafts personalized follow-up emails
-* Schedules meetings and next steps
-* Adapts tone based on customer context
+* Drafts follow-ups and meeting summaries
+* Adapts messaging based on context and tone
 
 ---
 
 ## Post-Meeting Key Functions (One-Liners)
 
-* Transcribe and summarize the meeting
-* Extract customer intents (buy signals, objections, complaints)
-* Delegate tasks to appropriate sub-agents
-* Assign trust score to customer claims
-* Analyze deal health using historical CRM data
-* Draft and queue personalized follow-up email
-* Schedule next meeting or touchpoint
-* Update CRM with structured notes and status
-* Log and triage bugs or product issues
-* Validate all actions for compliance
-* Generate or update leads/opportunities
-* Flag high-risk or high-value cases for human review
-* Trigger resolution workflows (refunds, replacements, support actions)
-* Update customer health and deal confidence score
+* Generate meeting summary and key takeaways
+* Extract and classify customer intent
+* Draft follow-up email for approval
+* Recommend and schedule next steps
+* Prepare CRM updates for approval
+* Log and triage product issues
+* Validate all outputs for compliance
+* Score deal health and customer sentiment
+* Flag items requiring human escalation
+* Trigger resolution recommendations (pending approval)
 
 ---
 
 ## Key Insight
 
-This is not a single AI assistant—it’s a coordinated system of agents.
-The advantage comes from **specialization + orchestration**, not a monolithic model.
+The system doesn’t replace the rep—it **runs in parallel**, handling analysis and prep work while the rep stays in control of final decisions.
 
 ---
 
 ## Positioning
 
-**A multi-agent AI system that autonomously runs the entire revenue and customer lifecycle—while staying compliant in high-stakes industries like medical devices.**
-# Med Device Revenue Copilot (Sales + Customer Success)
-
+**A real-time AI copilot that thinks, prepares, and executes in the background—while the sales rep stays the decision-maker.**
