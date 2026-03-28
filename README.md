@@ -2,7 +2,7 @@
 
 ## Overview
 
-A multi-agent AI system that joins sales and support conversations, surfaces real-time insights to reps, and autonomously prepares post-meeting actions—while keeping the human in control.
+A multi-agent AI system that joins sales and support conversations, surfaces real-time insights to reps, and autonomously prepares post-meeting actions—while keeping the human in control. It aids the medical device sales rep here with surfacing the right information for them, shows the real-time actions it's performing to aid it as well as providing an overall sentiment of the meeting with the doctor. It's overall purpose is to aid the medical device sales rep with closing the deal with the doctor.
 
 ---
 
