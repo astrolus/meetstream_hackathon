@@ -21,7 +21,7 @@ A multi-agent AI system that joins sales and support conversations, surfaces rea
 
 ### Action Panel (Human-in-the-Loop)
 
-* Background agents generate post-meeting actions in real time
+* Background agents generate real-time meeting actions
 * Each action requires explicit **Approve / Deny** from the rep
 
 Examples:
@@ -29,8 +29,6 @@ Examples:
 * Draft follow-up email → Approve / Deny
 * Schedule next meeting → Approve / Deny
 * CRM update → Approve / Deny
-* Refund / resolution suggestion → Approve / Deny
-
 ---
 
 ## Architecture: Multi-Agent Orchestration
@@ -46,59 +44,21 @@ Examples:
 
 ### Specialized Sub-Agents
 
-#### CRM & Data Agent
+#### Scheduler Agent
 
-* Prepares CRM updates and structured notes
-* Creates/updates leads and opportunities
+* Schedules follow-up meetings if needed
+* updates calendar and plans new meeting for new leads identified
 
 #### Analytics Agent
 
 * Pulls sales data and historical records
 * Assesses deal health and recommends next steps
+* Provides real time data in response to doctor questions
 
-#### Trust & Decision Agent
+#### Background Communication Agent
 
-* Scores customer claims and evaluates resolutions
-* Flags high-risk or anomalous scenarios
-
-#### Support & Bug Triage Agent
-
-* Extracts and classifies issues raised
-* Prepares bug reports and internal routing
-
-#### Compliance Agent
-
-* Validates outputs against med device regulations
-* Flags non-compliant suggestions before surfacing
-
-#### Communication Agent
-
-* Drafts follow-ups and meeting summaries
+* Drafts follow-ups email content and meeting summaries
 * Adapts messaging based on context and tone
 
 ---
 
-## Post-Meeting Key Functions (One-Liners)
-
-* Generate meeting summary and key takeaways
-* Extract and classify customer intent
-* Draft follow-up email for approval
-* Recommend and schedule next steps
-* Prepare CRM updates for approval
-* Log and triage product issues
-* Validate all outputs for compliance
-* Score deal health and customer sentiment
-* Flag items requiring human escalation
-* Trigger resolution recommendations (pending approval)
-
----
-
-## Key Insight
-
-The system doesn’t replace the rep—it **runs in parallel**, handling analysis and prep work while the rep stays in control of final decisions.
-
----
-
-## Positioning
-
-**A real-time AI copilot that thinks, prepares, and executes in the background—while the sales rep stays the decision-maker.**
